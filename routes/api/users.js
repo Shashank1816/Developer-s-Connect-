@@ -12,7 +12,7 @@ const router = express.Router();
 //@desc  Register User
 //@access Public
 router.post('/',[
-    check('name','Name is required').not().isEmpty(),
+    check('name','Name is required, This field is mandatory!').not().isEmpty(),
     check('email','Please include a valid Email').isEmail(),
     check('password','Enter atleast 6 characters').isLength({min:6}),
 ],
